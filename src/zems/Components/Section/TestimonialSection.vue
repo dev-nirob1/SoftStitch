@@ -21,10 +21,10 @@ const reviews = ref([
 </script>
 
 <template>
-  <section class="testimonials bg-light">
+  <section class="testimonials">
     <div class="container">
       <div class="flex align-center justify-between gap-1 mb-2 ">
-        <SectionTitle title="What Our Clients Say" sub-title="Success Stories" />
+        <BaseTitle>What Our Clients Say</BaseTitle>
         <div class="flex justify-center gap-1">
           <BaseButton class="bg-primary text-white" id="prev">&laquo; Prev</BaseButton>
           <BaseButton class="bg-primary text-white" id="next">Next &raquo;</BaseButton>
