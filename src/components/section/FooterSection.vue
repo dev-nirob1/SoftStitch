@@ -61,7 +61,7 @@
 
 <style scoped>
 .footer {
-  background: var(--primary-color);
+  background: var(--dark-color);
   color: var(--white-color);
 }
 

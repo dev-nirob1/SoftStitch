@@ -12,10 +12,10 @@ import TestimonialSection from './zems/Components/Section/TestimonialSection.vue
 <template>
   <NavbarSection/>
   <HeroSection/>
-  <ProductDetails/>
+  <!-- <ProductDetails/> -->
   <CtaSection/>
   <TestimonialSection/>
-  <FaqSection/>
+  <!-- <FaqSection/> -->
   <FooterSection/>
 </template>
 
