@@ -1,10 +1,143 @@
+<script setup>
+import { ref } from 'vue';
+defineProps({
+
+  handleOpenFormModal: {
+    type: Function
+  }
+})
+const isMenuOpen = ref(false);
+const handleHamburger = () => {
+  isMenuOpen.value = !isMenuOpen.value;
+}
+
+</script>
+
 <template>
-  <header>
-    navbar
+  <header class="navbar relative">
+    <div class="container">
+      <nav class="flex justify-between align-center">
+        <a href="#" class="logo">
+          <BaseImage image="/logo.png" alt="logo" />
+        </a>
+
+        <ul class="nav-links" :class="{ 'active': isMenuOpen }">
+          <ListItem class="mobile-logo">
+            <a href="#" class="logo">
+              <BaseImage image="https://bagpoint.netlify.app/logo.png" alt="logo" />
+            </a>
+          </ListItem>
+          <ListItem>
+            <a href="#hero">Home</a>
+          </ListItem>
+          <ListItem>
+            <a href="#about">About</a>
+          </ListItem>
+          <ListItem>
+            <a href="#specification">Specification</a>
+          </ListItem>
+          <ListItem>
+            <a href="#reviews">Reviews</a>
+          </ListItem>
+        </ul>
+        <div>
+          <BaseButton @click="handleOpenFormModal" class="outline-btn">Buy Now</BaseButton>
+        </div>
+
+
+        <div @click="handleHamburger" class="hamburger flex-center">
+          <i :class="isMenuOpen ? 'fas fa-xmark' : 'fas fa-bars'" class="fa-2xl"></i>
+        </div>
+      </nav>
+    </div>
   </header>
+
 </template>
+
 <style scoped>
-header{
-  background: red;
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  padding: .75rem 0;
+  color: var(--white-color);
+  background: var(--primary-color);
+}
+
+.container {
+  transition: all .5s ease-in-out;
+}
+
+.navbar .logo {
+  width: auto;
+  height: 40px;
+}
+
+.navbar .logo img {
+  height: 100%;
+}
+
+.nav-links {
+  background: var(--primary-color);
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: -100%;
+  top: 0;
+  width: 0;
+  height: 100vh;
+  z-index: 1;
+  transition: all .3s ease-in-out;
+}
+
+.nav-links.active {
+  left: 0;
+  width: 60vw;
+}
+
+.nav-links a {
+  display: inline-block;
+  padding: .5rem 1rem;
+}
+
+.hamburger {
+  height: 2rem;
+  width: 2rem;
+  color: var(--white-color);
+}
+.outline-btn{
+  color: var(--white-color);
+  border-color: var(--white-color);
+}
+.outline-btn:hover{
+  border-color: var(--secondary-color);
+}
+.outline-btn {
+  padding: .65rem 1rem;
+}
+@media (min-width: 768px) {
+.navbar .logo {
+  width: auto;
+  height: 60px;
+}
+  .hamburger,
+  .mobile-logo {
+    display: none;
+  }
+
+  .nav-links {
+    position: static;
+    height: fit-content;
+    width: fit-content;
+    background: transparent;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  li a.router-link-exact-active {
+    color: var(--primary-color);
+  }
+
 }
 </style>
