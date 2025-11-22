@@ -21,7 +21,7 @@
 }
 @media(min-width: 768px){
   .hero .content{
-    padding-top: 12rem;
+    padding: 12rem 0;
     max-width: 45%;
   font-size: 1.1rem;
 }

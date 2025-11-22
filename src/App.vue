@@ -4,6 +4,7 @@ import NavbarSection from './components/section/NavbarSection.vue';
 import CtaSection from './zems/Components/Section/CtaSection.vue';
 import FaqSection from './zems/Components/Section/FaqSection.vue';
 import FeatureSection from './zems/Components/Section/FeatureSection.vue';
+import GallerySection from './zems/Components/Section/GallerySection.vue';
 import HeroSection from './zems/Components/Section/HeroSection.vue';
 import ProductDetails from './zems/Components/Section/ProductDetails.vue';
 import TestimonialSection from './zems/Components/Section/TestimonialSection.vue';
@@ -15,6 +16,7 @@ import TestimonialSection from './zems/Components/Section/TestimonialSection.vue
   <HeroSection/>
   <FeatureSection/>
   <!-- <ProductDetails/> -->
+  <GallerySection />
   <CtaSection/>
   <TestimonialSection/>
   <!-- <FaqSection/> -->
