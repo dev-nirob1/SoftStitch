@@ -18,13 +18,13 @@ const handleHamburger = () => {
     <div class="container">
       <nav class="flex justify-between align-center">
         <a href="#" class="logo">
-          <BaseImage image="/logo.png" alt="logo" />
+          <BaseImage image="https://scionassetbd.com/uploads/brands/logo.png" alt="logo" />
         </a>
 
         <ul class="nav-links" :class="{ 'active': isMenuOpen }">
           <ListItem class="mobile-logo">
             <a href="#" class="logo">
-              <BaseImage image="https://bagpoint.netlify.app/logo.png" alt="logo" />
+              <BaseImage image="https://scionassetbd.com/uploads/brands/logo.png" alt="logo" />
             </a>
           </ListItem>
           <ListItem>
@@ -60,8 +60,8 @@ const handleHamburger = () => {
   top: 0;
   z-index: 999;
   padding: .75rem 0;
-  color: var(--white-color);
-  background: var(--primary-color);
+  /* color: var(--white-color); */
+  background: var(--white-color);
 }
 
 .container {
@@ -106,16 +106,7 @@ const handleHamburger = () => {
   width: 2rem;
   color: var(--white-color);
 }
-.outline-btn{
-  color: var(--white-color);
-  border-color: var(--white-color);
-}
-.outline-btn:hover{
-  border-color: var(--secondary-color);
-}
-.outline-btn {
-  padding: .65rem 1rem;
-}
+
 @media (min-width: 768px) {
 .navbar .logo {
   width: auto;

@@ -13,7 +13,7 @@ html {
   --heading-font: sans-serif;
 
   /* --primary-color: #7ea6cb; */
-  --primary-color: #017778;
+  --primary-color: #A97458;
   /* --secondary-color: #386790; */
   --secondary-color: #024444;
   --white-color: #ffffff;
@@ -184,8 +184,8 @@ ul {
   outline: none;
   border: none;
   overflow: hidden;
-  padding: .9rem 1.75rem;
-  border-radius: 1.5rem;
+  padding: .75rem 1.5rem;
+  border-radius: .5rem;
   color: var(--white-color);
   font-size: 1rem;
   text-align: center;

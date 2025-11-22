@@ -5,7 +5,7 @@
       <!-- Footer logo and contact info -->
       <div class="contact-info">
         <a href="/" class="logo">
-          <BaseImage image="/logo.png" alt="Real Estate Logo" />
+          <BaseImage image="https://bagpoint.netlify.app/logo.png" alt="Real Estate Logo" />
         </a>
 
         <BaseParagraph>
