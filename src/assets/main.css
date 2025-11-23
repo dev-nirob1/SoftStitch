@@ -12,12 +12,11 @@ html {
   --body-font:  sans-serif;
   --heading-font: sans-serif;
 
-  /* --primary-color: #7ea6cb; */
-  --primary-color: #A97458;
+  --primary-color: #710014;
   /* --secondary-color: #386790; */
-  --secondary-color: #024444;
-  --white-color: #ffffff;
-  --dark-color: #000000;
+  --secondary-color: #b38f6f;
+  --white-color: #f2f1ed;
+  --dark-color: #161616;
   --light-color: #6c757d;
   --border-color: #dee2e6;
   --body-bg: #ffff;
@@ -196,12 +195,12 @@ ul {
   background: var(--dark-color);
 }
 .outline-btn {
-  border: 1px solid var(--secondary-color);
-  color: var(--secondary-color);
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
   background: transparent;
 }
 .outline-btn:hover {
-  background: var(--secondary-color);
+  background: var(--primary-color);
   color: var(--white-color);
 }
 @media (min-width: 576px) {

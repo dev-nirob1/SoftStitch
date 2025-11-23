@@ -18,8 +18,9 @@
 .hero {
   min-height: 100vh;
   padding: 3rem 0;
-  background: url('/hero.jpg') no-repeat center / cover ;
+  background: url('/public/hero.jpg') no-repeat center / cover ;
 }
+
 @media(min-width: 768px){
   .hero .content{
     padding: 12rem 0;
