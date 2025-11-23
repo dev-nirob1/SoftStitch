@@ -1,11 +1,15 @@
 <template>
   <section class="cta-section relative mt-5">
-    <div class="container medium-2 gap-2">
+    <div class="container large-2 gap-2">
       <div class="cta-content">
         <BaseTitle>Wrap Yourself in Soft Comfort</BaseTitle>
         <BaseParagraph>
           Discover premium knit sweaters designed for warmth, style, and everyday comfort.
         </BaseParagraph>
+        <div class="flex align-center gap-1 mb-1">
+          <h4>৳1490</h4>
+          <span class="discount">20% OFF</span>
+        </div>
         <BaseButton class="outline-btn">
           Shop Now
         </BaseButton>
@@ -20,20 +24,36 @@
 <style scoped>
 .cta-section {
   padding: 8rem 0;
-  background: var(--primary-color);
+  background: var(--dark-color);
+  color: var(--white-color);
   /* background: url('/cta.jpg') center / cover */
 }
-.btn{color:var(--white-color);border-color:var(--white-color)}
+
+.btn {
+  color: var(--white-color);
+  border-color: var(--white-color)
+}
+
 .cta-content {
   /* max-width: 50%; */
   font-size: 1.1rem;
 }
-.image {
-  position: absolute;
-  right: 2rem;
-  height: 500px;
-  bottom: 0;
-  max-width: 50%;
+
+.cta-section p {
+  margin: .5rem 0;
 }
-img {object-fit: contain}
+
+@media (min-width: 992px) {
+  .image {
+    position: absolute;
+    right: 0;
+    height: 560px;
+    bottom: 0;
+    max-width: 50%;
+  }
+
+  img {
+    object-fit: contain;
+  }
+}
 </style>

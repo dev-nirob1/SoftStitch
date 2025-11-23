@@ -5,21 +5,18 @@ defineProps({
   }
 })
 </script>
-
 <template>
   <div class="testimonial-card">
-    <i class="bg-graphic fa-solid fa-quote-right fa-10x"></i>
     <div class="flex">
       <BaseParagraph>
-        <i class="fa-solid fa-quote-left fa-2x"></i>
         {{ review.review }}
       </BaseParagraph>
     </div>
     <div class="flex align-center gap-1">
-      <BaseImage class="height-full width-full" :image="review.image" :alt="review.description" />
+      <BaseImage class="height-full width-full" :image="review.avatar" />
       <div>
         <SubTitle>{{ review.name }}</SubTitle>
-        <span>{{ review.description }}</span>
+        <span>{{ review.role }}</span>
       </div>
     </div>
   </div>
@@ -27,45 +24,34 @@ defineProps({
 
 <style>
 .testimonial-card {
-  position: relative;
+  border-radius: .75rem;
   padding: 2rem 1.5rem;
+  font-size: 1.1rem;
   background: var(--white-color);
-  box-shadow: var(--box-shadow);
-  scroll-snap-align: start;
-  border-radius: .5rem;
+  border: 1px solid var(--border-color);
+  flex: 0 0 100%;
+}
+
+.testimonial-card i {
+  color: var(--primary-color);
+}
+
+.testimonial-card p {
+  font-style: italic;
+  margin-top: .5rem;
 }
 
 .testimonial-card img {
   height: 4rem;
   width: 4rem;
+  border-radius: 50%;
   object-fit: cover;
 }
 
-.bg-graphic {
-  position: absolute;
-  right: 1rem;
-  bottom: 0;
-  opacity: .1;
-}
-/*
-@media (min-width: 540px) {
+@media (min-width: 768px) {
   .testimonial-card {
-    min-width: 400px;
-  }
-} */
-
-@media (min-width: 992px) {
-  /* .testimonial-card {
-    min-width: calc(50% - 1rem);
-  } */
-  .testimonial-card p,
-  .testimonial-card span {
-    font-size: 1.15rem;
-  }
-
-  .bg-graphic {
-    right: 2rem;
-    bottom: 0;
+    flex: 0 0 calc(50% - 1rem);
   }
 }
+
 </style>

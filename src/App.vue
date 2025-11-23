@@ -15,7 +15,7 @@ import TestimonialSection from './zems/Components/Section/TestimonialSection.vue
   <NavbarSection/>
   <HeroSection/>
   <FeatureSection/>
-  <!-- <ProductDetails/> -->
+  <ProductDetails/>
   <GallerySection />
   <CtaSection/>
   <TestimonialSection/>

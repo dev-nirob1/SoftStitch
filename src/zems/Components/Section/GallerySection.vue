@@ -36,4 +36,7 @@
 .gallery {
   padding: 3.75rem 0;
 }
+.gallery .image {
+  max-height: 400px;
+}
 </style>
