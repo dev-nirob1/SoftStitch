@@ -48,7 +48,7 @@
     position: absolute;
     right: 0;
     height: 560px;
-    bottom: 0;
+    bottom: -.6rem;
     max-width: 50%;
   }
 

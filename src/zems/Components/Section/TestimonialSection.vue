@@ -73,16 +73,14 @@ const testimonials = ref([
 <template>
   <section class="testimonials">
     <div class="container">
-      <div class="flex align-center justify-between gap-1 mb-2 ">
-        <BaseTitle>What Our Clients Say</BaseTitle>
-        <div class="flex justify-center gap-1">
-          <BaseButton class="bg-primary text-white" id="prev">&laquo; Prev</BaseButton>
-          <BaseButton class="bg-primary text-white" id="next">Next &raquo;</BaseButton>
-        </div>
-      </div>
+        <BaseTitle class="text-center mb-2">What Our Clients Say</BaseTitle>
 
       <div class="card-slider">
         <TestimonialCard v-for="review in testimonials" :review="review" :key="review.id" />
+      </div>
+      <div class="flex justify-center gap-1">
+        <BaseButton class="bg-dark text-white" id="prev">&laquo; Prev</BaseButton>
+        <BaseButton class="bg-dark text-white" id="next">Next &raquo;</BaseButton>
       </div>
 
     </div>

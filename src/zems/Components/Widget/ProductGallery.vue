@@ -3,7 +3,7 @@ import { ref } from 'vue';
 
 const images = [
   {
-    image: "https://tunatheme.com/tf/html/quarter-preview/quarter/img/service/31.jpg",
+    image: "/red.jpg",
     color: { name: "Red", hex: "#D86A6A" }
   },
   {
@@ -21,10 +21,10 @@ const images = [
 ];
 
 
-const activeImage = ref(0)
-
-const handleChangeImage = (i) => {
-  activeImage.value = i
+const activeImage = ref(images[0])
+const handleChangeImage = (item) => {
+  activeImage.value = images[item] ;
+  console.log(item);
 }
 
 </script>
@@ -33,11 +33,11 @@ const handleChangeImage = (i) => {
 <template>
   <section class="gallery">
     <div class="active-image">
-      <BaseImage :image="images[0].image" />
+      <BaseImage :image="activeImage.image" />
     </div>
     <div class="thumbs mt-1">
-      <div v-for="(item,i) in images" :key="i" class="color-list">
-        <div :style="{'background': item.color.hex}" class="color active"></div>
+      <div v-for="(item, i) in images" :key="i" class="color-list">
+        <div @click="handleChangeImage(i)" :style="{ 'background': item.color.hex }" class="color active"></div>
       </div>
     </div>
   </section>
@@ -47,14 +47,17 @@ const handleChangeImage = (i) => {
 .gallery {
   margin-bottom: 2rem;
 }
-.color{
+
+.color {
   height: 1.5rem;
   width: 1.5rem;
   border-radius: 50%;
 }
+
 .color.active {
   border: 2px solid var(--dark-color);
 }
+
 .gallery .active-image {
   width: 100%;
   height: 280px;

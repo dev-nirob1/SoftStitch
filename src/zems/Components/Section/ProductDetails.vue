@@ -4,7 +4,7 @@ import ProductGallery from '../Widget/ProductGallery.vue';
 </script>
 
 <template>
-  <section class="product-details">
+  <section class="product-details bg-light">
     <div class="container">
       <div class="medium-2 gap-2">
         <ProductGallery/>
