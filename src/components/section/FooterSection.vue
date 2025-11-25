@@ -52,8 +52,8 @@
 
     <!-- Footer bottom copyright -->
     <div class="footer-bottom">
-      <BaseParagraph> &copy; {{ new Date().getFullYear() }} BagPoint. All rights reserved. designed and developed by <a
-          href="webpoka.com">Webpoka</a>
+      <BaseParagraph> &copy; {{ new Date().getFullYear() }} SoftStitch. Designed and developed by
+        <a href="webpoka.com">Webpoka</a>
       </BaseParagraph>
     </div>
   </footer>
@@ -82,13 +82,16 @@
   color: var(--primary-color);
   padding: 0 .75rem;
 }
+
 .social-links a:hover {
   background: var(--primary-color);
   color: var(--white-color);
 }
+
 .footer .sub-title {
   margin-bottom: 1.5rem;
 }
+
 .footer ul li {
   margin: .75rem 0;
 }
@@ -102,6 +105,7 @@
 .footer-bottom p {
   font-size: 14px;
 }
+
 .footer-bottom a:hover {
   color: var(--primary-color);
 }

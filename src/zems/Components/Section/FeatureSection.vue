@@ -35,10 +35,10 @@ const features = [
 <template>
   <section id="about" class="features">
     <div class="container">
-<BaseTitle class="text-center mb-2">Premium Comfort & Quality</BaseTitle>
+      <BaseTitle class="text-center mb-2">Premium Comfort & Quality</BaseTitle>
       <div class="medium-3 gap-2">
         <div v-for="(item, i) in features" :key="i" class="feature-card">
-          <div class="image">
+          <div class="image relative">
             <BaseImage :image="item.image" />
           </div>
           <div class="p-1">
@@ -56,6 +56,7 @@ const features = [
 }
 
 .feature-card {
+  cursor:pointer;
   box-shadow: var(--box-shadow);
   border-radius: .5rem;
 }
@@ -63,13 +64,17 @@ const features = [
 .feature-card .image {
   height: 250px;
   border-radius: .5rem .5rem 0 0;
+  overflow: hidden;
+}
+.image:hover img{
+  transform: scale(1.1)
+}
+.feature-card .image img {
+  transition: all .3s ease-in-out;
 }
 
 .feature-card p {
   margin-top: .5rem
 }
 
-.feature-card .image img {
-  border-radius: .5rem .5rem 0 0;
-}
 </style>

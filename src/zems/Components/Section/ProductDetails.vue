@@ -24,7 +24,7 @@ import ProductGallery from '../Widget/ProductGallery.vue';
             <ListItem><i class="fas fa-tint"></i> Machine Washable</ListItem>
             <ListItem><i class="fas fa-layer-group"></i> Premium Wool Blend</ListItem>
           </ul>
-          <BaseButton class="bg-dark mt-2">Measurement</BaseButton>
+          <BaseButton class="bg-primary mt-2">Measurement</BaseButton>
         </div>
       </div>
     </div>
@@ -33,5 +33,6 @@ import ProductGallery from '../Widget/ProductGallery.vue';
 <style scoped>
 .product-details {
   padding: 3.75rem 0;
+  font-size: 1.05rem;
 }
 </style>

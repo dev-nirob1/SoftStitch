@@ -8,7 +8,7 @@
         </BaseParagraph>
         <div class="flex align-center gap-1 mb-1">
           <h4>৳1490</h4>
-          <span class="discount">20% OFF</span>
+          <span class="text-secondary">20% OFF</span>
         </div>
         <BaseButton class="outline-btn">
           Shop Now
@@ -26,7 +26,6 @@
   padding: 8rem 0;
   background: var(--dark-color);
   color: var(--white-color);
-  /* background: url('/cta.jpg') center / cover */
 }
 
 .btn {
@@ -35,12 +34,15 @@
 }
 
 .cta-content {
-  /* max-width: 50%; */
   font-size: 1.1rem;
 }
 
 .cta-section p {
   margin: .5rem 0;
+}
+
+.outline-btn:hover {
+  border-color: var(--primary-color);
 }
 
 @media (min-width: 992px) {

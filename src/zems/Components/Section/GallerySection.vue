@@ -1,4 +1,5 @@
 <script setup>
+import ImageViewerModal from '@/components/widget/imageViewerModal.vue';
 import { ref } from 'vue';
 
 const images = ref([
@@ -27,19 +28,51 @@ const images = ref([
     image: 'https://images.pexels.com/photos/6995719/pexels-photo-6995719.jpeg?_gl=1*1cfagdg*_ga*OTAzOTgwMTguMTczNzAwNTI1OA..*_ga_8JE65Q40S6*czE3NjM4Mjc4NTUkbzMzJGcxJHQxNzYzODMyMTczJGo1OSRsMCRoMA..'
   },
 ])
+
+// modal logic
+const isModalOpen = ref(false)
+const selectedIndex = ref(0)
+
+const handleOpenModal = (imageIndex) => {
+  isModalOpen.value = true
+  // console.log('index', imageIndex);
+  selectedIndex.value = imageIndex;
+  // console.log('selected',selectedIndex, 'clicked', imageIndex);
+}
+const handleCloseModal = () => {
+  isModalOpen.value = false
+}
+const handlePrev = () => {
+  if (selectedIndex.value > 0) {
+    selectedIndex.value -= 1;
+  }
+}
+const handleNext = () => {
+  selectedIndex.value += 1;
+  if (selectedIndex.value === images.value.length) {
+    selectedIndex.value = 0;
+    // console.log('selected ', selectedIndex);
+  }
+}
 </script>
 
 <template>
   <section id="gallery" class="gallery">
     <div class="container">
-      <BaseTitle class=" text-center mb-2">SoftStitch sweater gallery</BaseTitle>
+      <BaseTitle class=" text-center mb-2">Sweater Showcase</BaseTitle>
       <div class="medium-3  gap-2">
 
-        <div v-for="img in images" :key="img.id" class="image">
+        <div v-for="(img, i) in images" :key="img.id" @click="handleOpenModal(i)" class="image">
           <BaseImage :image="img.image" />
         </div>
       </div>
     </div>
+    <ImageViewerModal class="modal" :isModalOpen="isModalOpen" :handleCloseModal="handleCloseModal"
+      :handleNext="handleNext" :handlePrev="handlePrev">
+      <div class="image">
+        <BaseImage :image="images[selectedIndex].image" :alt="images[selectedIndex].alt" />
+      </div>
+    </ImageViewerModal>
   </section>
 </template>
 
@@ -55,7 +88,6 @@ const images = ref([
   overflow: hidden;
   cursor: pointer;
 }
-
 
 .gallery .image::after {
   content: '+';
