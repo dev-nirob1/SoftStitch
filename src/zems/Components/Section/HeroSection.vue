@@ -1,14 +1,15 @@
 <template>
-  <section class="hero">
+  <section class="hero text-white relative">
     <div class="container">
+      <div class="medium-2  gap-2">
         <div class="content">
-        <HeroTitle>Soft. Stylish. <br> Winter-Ready.</HeroTitle>
-        <BaseParagraph>
-          Discover premium-quality sweaters designed for comfort and crafted for everyday elegance.
-        </BaseParagraph>
-        <div class="flex gap-1">
-          <BaseButton class="outline-btn">Explore Features</BaseButton>
-          <BaseButton class="bg-primary">Buy Now</BaseButton>
+          <HeroTitle>Soft. Stylish. <br> Winter-Ready.</HeroTitle>
+          <BaseParagraph>Discover premium-quality sweaters designed for comfort and crafted for everyday elegance.
+          </BaseParagraph>
+          <div class="flex gap-1">
+            <a class="btn bg-primary" href="#feature">Explore Feature</a>
+            <BaseButton class="outline-btn">Buy Now</BaseButton>
+          </div>
         </div>
       </div>
     </div>
@@ -16,16 +17,18 @@
 </template>
 <style scoped>
 .hero {
-  min-height: 100vh;
-  padding: 3rem 0;
-  background: url('/public/hero.jpg') no-repeat center / cover ;
+  min-height: 120vh;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  background: url('/hero.png') no-repeat center /cover;
 }
 
-@media(min-width: 768px){
-  .hero .content{
-    padding: 12rem 0;
-    max-width: 45%;
-  font-size: 1.1rem;
-}
+.image img {
+  position: absolute;
+  bottom: 0;
+  height: 450px;
+  width: 450px;
 }
 </style>
+
