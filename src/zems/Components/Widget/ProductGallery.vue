@@ -24,7 +24,6 @@ const handleActiveImage = (item) => {
   selectedImage.value = item;
 }
 
-
 </script>
 
 

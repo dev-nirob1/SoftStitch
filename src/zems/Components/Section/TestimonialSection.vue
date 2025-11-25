@@ -6,81 +6,82 @@ const testimonials = ref([
   {
     id: 1,
     name: "Sarah Khan",
-    role: "Student",
-    review: "BagPoint made my daily commute so much easier. The compartments keep everything organized and the comfort is unmatched.",
-    avatar: "https://randomuser.me/api/portraits/men/32.jpg"
+    role: "University Student",
+    review: "SoftStitch sweaters are unbelievably cozy! I wear mine to class every day. The material feels warm without being heavy.",
+    avatar: "https://randomuser.me/api/portraits/women/32.jpg"
   },
   {
     id: 2,
     name: "Jahid Hossain",
     role: "Office Worker",
-    review: "I carry my laptop and documents every day, and this bag handles everything effortlessly. Smart, durable, and very stylish.",
-    avatar: "https://images.unsplash.com/photo-1620000617482-821324eb9a14?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    review: "Perfect balance of comfort and style. I can wear these sweaters at work or on casual outings. The fit is clean and very flattering.",
+    avatar: "https://randomuser.me/api/portraits/women/45.jpg"
   },
   {
     id: 3,
     name: "Nabila Rahman",
     role: "Traveler",
-    review: "The lightweight design and storage options are perfect for trips. It fits all my essentials without feeling heavy at all.",
-    avatar: "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    review: "SoftStitch kept me warm during my entire winter trip. Lightweight, soft, and great for layering — easily my favorite travel sweater.",
+    avatar: "https://randomuser.me/api/portraits/women/44.jpg"
   },
   {
     id: 4,
     name: "Imran Chowdhury",
     role: "Photographer",
-    review: "I love how secure the pockets are. My gear stays safe and the bag feels super comfortable even on long shoots.",
-    avatar: "https://randomuser.me/api/portraits/men/32.jpg"
+    review: "I’m often outside for long shoots and these sweaters keep me warm without restricting movement. Stylish and incredibly comfortable.",
+    avatar: "https://randomuser.me/api/portraits/men/34.jpg"
   },
   {
     id: 5,
     name: "Farzana Ahmed",
-    role: "University Student",
-    review: "Perfect for carrying books, laptop, and accessories. The build quality feels premium and the design looks very modern.",
-    avatar: "https://randomuser.me/api/portraits/women/44.jpg"
+    role: "Teacher",
+    review: "The knit quality is outstanding. After several washes, the sweater still looks brand new. So soft and perfect for chilly mornings.",
+    avatar: "https://randomuser.me/api/portraits/women/52.jpg"
   },
   {
     id: 6,
     name: "Rafiq Karim",
-    role: "Tech Enthusiast",
-    review: "The laptop padding and pocket layout are excellent. Everything fits neatly and the bag still feels surprisingly light.",
-    avatar: "https://randomuser.me/api/portraits/men/28.jpg"
+    role: "Software Engineer",
+    review: "Soft, breathable, and warm — ideal for long hours at my desk. I bought two more colors because the fit is just that good.",
+    avatar: "https://randomuser.me/api/portraits/men/23.jpg"
   },
   {
     id: 7,
     name: "Maya Sultana",
-    role: "Teacher",
-    review: "I carry my books and supplies every day, and this bag handles it all with ease. Functional, clean, and very reliable.",
-    avatar: "https://randomuser.me/api/portraits/women/22.jpg"
+    role: "Fashion Lover",
+    review: "The texture and stitching feel premium. I love pairing my SoftStitch sweater with jeans for a clean, modern winter look.",
+    avatar: "https://randomuser.me/api/portraits/women/20.jpg"
   },
   {
     id: 8,
     name: "Tanvir Alam",
     role: "Freelancer",
-    review: "Spacious, comfortable, and minimal — exactly what I needed. It organizes my work gear perfectly and feels great to use.",
-    avatar: "https://randomuser.me/api/portraits/men/50.jpg"
+    review: "I’m sensitive to rough fabrics, but this sweater feels incredibly gentle on the skin. Warm enough for winter, comfortable enough for all-day wear.",
+    avatar: "https://randomuser.me/api/portraits/men/55.jpg"
   },
   {
     id: 9,
     name: "Samira Niaz",
     role: "Designer",
-    review: "The clean look and sturdy material make it my favorite everyday bag. Practical, stylish, and perfect for busy days.",
+    review: "The design is minimal and classy. Whether I’m at work or out with friends, this sweater always gets compliments. Amazing quality!",
     avatar: "https://randomuser.me/api/portraits/women/15.jpg"
   }
 ])
+
 
 </script>
 
 <template>
   <section id="testimonials" class="testimonials">
     <div class="container">
-        <BaseTitle class="text-center mb-2">What Our Clients Say</BaseTitle>
+      <BaseTitle class="text-center mb-2">What Our Clients Say</BaseTitle>
 
       <div class="card-slider">
         <TestimonialCard v-for="review in testimonials" :review="review" :key="review.id" />
       </div>
       <div class="flex justify-center gap-1">
-        <BaseButton class="bg-dark text-white" id="prev">&laquo; Prev</BaseButton>
-        <BaseButton class="bg-dark text-white" id="next">Next &raquo;</BaseButton>
+        <BaseButton class="outline-btn" id="prev">&laquo; Prev</BaseButton>
+        <BaseButton class="outline-btn" id="next">Next &raquo;</BaseButton>
       </div>
 
     </div>

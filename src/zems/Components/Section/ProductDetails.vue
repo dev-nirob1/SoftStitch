@@ -7,7 +7,10 @@ import ProductGallery from '../Widget/ProductGallery.vue';
   <section id="feature" class="product-details bg-light">
     <div class="container">
       <div class="medium-2 gap-2">
+        <!-- images based on color changed -->
         <ProductGallery/>
+        
+          <!-- details  -->
         <div class="project-details">
           <BaseTitle class="mb-1">Wrap Yourself in Comfort</BaseTitle>
              <BaseParagraph>

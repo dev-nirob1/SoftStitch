@@ -31,48 +31,54 @@ const images = ref([
 
 // modal logic
 const isModalOpen = ref(false)
-const selectedIndex = ref(0)
+const selectedImage = ref(images.value[0])
 
-const handleOpenModal = (imageIndex) => {
-  isModalOpen.value = true
-  // console.log('index', imageIndex);
-  selectedIndex.value = imageIndex;
-  // console.log('selected',selectedIndex, 'clicked', imageIndex);
+// close modal
+const handleOpenModal = () => {
+  isModalOpen.value = true;
 }
+// close modal
 const handleCloseModal = () => {
-  isModalOpen.value = false
+  isModalOpen.value = false;
 }
-const handlePrev = () => {
-  if (selectedIndex.value > 0) {
-    selectedIndex.value -= 1;
+// handle prev image
+const handlePrevImage = () => {
+  if (selectedImage.value <= 0) {
+    return;
+  } else {
+    selectedImage.value += 1;
   }
 }
-const handleNext = () => {
-  selectedIndex.value += 1;
-  if (selectedIndex.value === images.value.length) {
-    selectedIndex.value = 0;
-    // console.log('selected ', selectedIndex);
+// handle next image
+const handleNextImage = () => {
+  if (selectedImage.value >= images.value.length) {
+    selectedImage.value = 0;
+  } else {
+    selectedImage.value += 1;
   }
 }
+
 </script>
 
 <template>
   <section id="gallery" class="gallery">
+
+    <ImageViewerModal :selectedImage="selectedImage" :handleNextImage="handleNextImage"
+      :handlePrevImage="handlePrevImage" :isModalOpen="isModalOpen" :handleCloseModal="handleCloseModal" />
+
     <div class="container">
       <BaseTitle class=" text-center mb-2">Sweater Showcase</BaseTitle>
-      <div class="medium-3  gap-2">
+      <div class="medium-3 gap-2">
 
-        <div v-for="(img, i) in images" :key="img.id" @click="handleOpenModal(i)" class="image">
+        <div v-for="(img) in images" :key="img.id" @click="handleOpenModal" class="image">
           <BaseImage :image="img.image" />
         </div>
       </div>
     </div>
-    <ImageViewerModal class="modal" :isModalOpen="isModalOpen" :handleCloseModal="handleCloseModal"
-      :handleNext="handleNext" :handlePrev="handlePrev">
-      <div class="image">
-        <BaseImage :image="images[selectedIndex].image" :alt="images[selectedIndex].alt" />
-      </div>
-    </ImageViewerModal>
+
+
+    <!-- :activeImage="activeImage" -->
+
   </section>
 </template>
 
