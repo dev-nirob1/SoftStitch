@@ -71,7 +71,7 @@ const testimonials = ref([
 </script>
 
 <template>
-  <section class="testimonials">
+  <section id="testimonials" class="testimonials">
     <div class="container">
         <BaseTitle class="text-center mb-2">What Our Clients Say</BaseTitle>
 

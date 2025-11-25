@@ -15,7 +15,8 @@ html {
   --primary-color: #710014;
   /* --secondary-color: #386790; */
   --secondary-color: #b38f6f;
-  --white-color: #f2f1ed;
+  /* --white-color: #f2f1ed; */
+  --white-color: #fff;
   --dark-color: #161616;
   --light-color: #6c757d;
   --border-color: #dee2e6;

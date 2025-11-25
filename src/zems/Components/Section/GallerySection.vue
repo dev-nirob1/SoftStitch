@@ -1,5 +1,5 @@
 <template>
-  <section class="gallery">
+  <section id="gallery" class="gallery">
     <div class="container">
       <BaseTitle class=" text-center mb-2">SoftStitch sweater gallery</BaseTitle>
       <div class="medium-3  gap-2">

@@ -2,7 +2,7 @@
 import FooterSection from './components/section/FooterSection.vue';
 import NavbarSection from './components/section/NavbarSection.vue';
 import CtaSection from './zems/Components/Section/CtaSection.vue';
-import FaqSection from './zems/Components/Section/FaqSection.vue';
+// import FaqSection from './zems/Components/Section/FaqSection.vue';
 import FeatureSection from './zems/Components/Section/FeatureSection.vue';
 import GallerySection from './zems/Components/Section/GallerySection.vue';
 import HeroSection from './zems/Components/Section/HeroSection.vue';
@@ -12,15 +12,15 @@ import TestimonialSection from './zems/Components/Section/TestimonialSection.vue
 </script>
 
 <template>
-  <NavbarSection/>
-  <HeroSection/>
-  <FeatureSection/>
-  <ProductDetails/>
+  <NavbarSection />
+  <HeroSection />
+  <FeatureSection />
+  <ProductDetails />
   <GallerySection />
-  <CtaSection/>
-  <TestimonialSection/>
+  <CtaSection />
+  <TestimonialSection />
   <!-- <FaqSection/> -->
-  <FooterSection/>
+  <FooterSection />
 </template>
 
 <style scoped></style>

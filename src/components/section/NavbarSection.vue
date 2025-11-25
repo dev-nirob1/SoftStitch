@@ -18,26 +18,26 @@ const handleHamburger = () => {
     <div class="container">
       <nav class="flex justify-between align-center">
         <a href="#" class="logo">
-          <BaseImage image="https://scionassetbd.com/uploads/brands/logo.png" alt="logo" />
+          <BaseImage image="/logo.png" alt="logo" />
         </a>
 
         <ul class="nav-links" :class="{ 'active': isMenuOpen }">
           <ListItem class="mobile-logo">
-            <a href="#" class="logo">
-              <BaseImage image="https://scionassetbd.com/uploads/brands/logo.png" alt="logo" />
+            <a href="#" >
+              <BaseImage image="/logo.png" alt="logo" />
             </a>
           </ListItem>
           <ListItem>
-            <a href="#hero">Home</a>
+            <a href="#">Home</a>
           </ListItem>
           <ListItem>
             <a href="#about">About</a>
           </ListItem>
           <ListItem>
-            <a href="#specification">Specification</a>
+            <a href="#gallery">Gallery</a>
           </ListItem>
           <ListItem>
-            <a href="#reviews">Reviews</a>
+            <a href="#testimonials">Testimonials</a>
           </ListItem>
         </ul>
         <div>
@@ -64,11 +64,12 @@ const handleHamburger = () => {
   background: var(--white-color);
 }
 .outline-btn {
-  border: 2px solid var(--primary-color);
-  color: var(--primary-color);
+  border: 2px solid var(--dark-color);
+  color: var(--dark-color);
 }
 .outline-btn:hover {
   color: var(--white-color);
+    border-color: var(--primary-color);
   background: var(--primary-color);
 }
 .container {
@@ -79,13 +80,15 @@ const handleHamburger = () => {
   width: auto;
   height: 40px;
 }
-
+.mobile-logo img{
+  height: 50px;
+}
 .navbar .logo img {
   height: 100%;
 }
 
 .nav-links {
-  background: var(--primary-color);
+  background: var(--white-color);
   padding: 1rem 0;
   display: flex;
   flex-direction: column;
@@ -111,7 +114,7 @@ const handleHamburger = () => {
 .hamburger {
   height: 2rem;
   width: 2rem;
-  color: var(--white-color);
+  color: var(--dark-color);
 }
 
 @media (min-width: 768px) {

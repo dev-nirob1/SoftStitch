@@ -33,7 +33,7 @@ const features = [
 ]
 </script>
 <template>
-  <section class="features">
+  <section id="about" class="features">
     <div class="container">
 <BaseTitle class="text-center mb-2">Premium Comfort & Quality</BaseTitle>
       <div class="medium-3 gap-2">
