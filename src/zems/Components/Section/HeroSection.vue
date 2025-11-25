@@ -4,11 +4,11 @@
       <div class="medium-2  gap-2">
         <div class="content">
           <HeroTitle>Soft. Stylish. <br> Winter-Ready.</HeroTitle>
-          <BaseParagraph>Discover premium-quality sweaters designed for comfort and crafted for everyday elegance.
+          <BaseParagraph>Stay warm in premium-crafted sweaters designed for everyday comfort.
           </BaseParagraph>
           <div class="flex gap-1">
-            <a class="btn bg-primary" href="#feature">Explore Feature</a>
-            <BaseButton class="outline-btn">Buy Now</BaseButton>
+            <BaseButton class="bg-primary">Buy Now</BaseButton>
+            <a class="btn outline-btn" href="#feature">Explore Feature</a>
           </div>
         </div>
       </div>

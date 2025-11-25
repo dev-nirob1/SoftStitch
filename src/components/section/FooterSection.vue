@@ -5,12 +5,11 @@
       <!-- Footer logo and contact info -->
       <div class="contact-info">
         <a href="/" class="logo">
-          <BaseImage image="https://bagpoint.netlify.app/logo.png" alt="Real Estate Logo" />
+          <BaseImage image="/footer-logo.png" alt="Real Estate Logo" />
         </a>
 
         <BaseParagraph>
-          we craft premium travel and everyday bags that blend comfort, durability, and style — designed for explorers,
-          commuters, and dreamers alike.
+          Soft, warm, and made with care — our sweaters are crafted to bring comfort to every winter moment.
         </BaseParagraph>
 
       </div>
@@ -20,13 +19,13 @@
         <SubTitle>Contact Us</SubTitle>
         <ul class="footer-links">
           <ListItem>
-            <i class="fa-solid fa-location-dot"></i> <span>BagPoint HQ, Dhaka 1216, Bangladesh</span>
+            <i class="fa-solid fa-location-dot"></i> <span>SoftStitch HQ, Dhaka 1216, Bangladesh</span>
           </ListItem>
           <ListItem>
             <i class="fa-solid fa-phone"></i> +8801234567890
           </ListItem>
           <ListItem>
-            <i class="fa-solid fa-envelope"></i> support@bagpoint.com
+            <i class="fa-solid fa-envelope"></i> support@softStitch.com
           </ListItem>
         </ul>
 
@@ -53,7 +52,8 @@
 
     <!-- Footer bottom copyright -->
     <div class="footer-bottom">
-      <BaseParagraph> &copy; {{ new Date().getFullYear() }} BagPoint. All rights reserved.
+      <BaseParagraph> &copy; {{ new Date().getFullYear() }} BagPoint. All rights reserved. designed and developed by <a
+          href="webpoka.com">Webpoka</a>
       </BaseParagraph>
     </div>
   </footer>
@@ -74,74 +74,23 @@
   display: flex;
   gap: 1rem;
   font-size: 1.5rem;
-
 }
 
 .footer .social-links a {
   border-radius: .25rem;
   background: var(--white-color);
-  color: var(--secondary-color);
+  color: var(--primary-color);
   padding: 0 .75rem;
-  /* border: 1px solid var(--border-color); */
 }
-
+.social-links a:hover {
+  background: var(--primary-color);
+  color: var(--white-color);
+}
 .footer .sub-title {
-  position: relative;
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
-
 .footer ul li {
   margin: .75rem 0;
-}
-
-.footer ul li a {
-  padding: .25rem 0;
-  position: relative;
-}
-
-.footer ul li a::before {
-  content: '➔';
-  position: absolute;
-  left: -1rem;
-  visibility: hidden;
-  opacity: 0;
-  transition: all .3s ease-in-out;
-}
-
-.footer ul li a:hover::before {
-  left: 0;
-  opacity: 1;
-  color: var(--primary-color);
-  visibility: visible;
-}
-
-.footer ul li a:hover {
-  color: var(--primary-color);
-  padding-left: 1.25rem;
-}
-
-.footer .newsletter-form {
-  display: flex;
-  align-items: center;
-}
-
-.footer .newsletter-form input {
-  background: var(--white-color);
-  border-radius: .25rem 0 0 .25rem;
-  margin: 0;
-  border: 1px solid var(--primary-color);
-}
-
-.footer .newsletter-form .btn {
-  padding: 1rem 2rem;
-  background: var(--secondary-color);
-  border-radius: 0 .25rem .25rem 0;
-  margin: 0;
-}
-
-.footer .newsletter-form .btn i {
-  color: var(--white-color);
 }
 
 .footer-bottom {
@@ -152,5 +101,8 @@
 
 .footer-bottom p {
   font-size: 14px;
+}
+.footer-bottom a:hover {
+  color: var(--primary-color);
 }
 </style>
