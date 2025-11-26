@@ -1,27 +1,27 @@
 <script setup>
-import ImageViewerModal from '@/components/widget/imageViewerModal.vue';
-import { ref } from 'vue';
+import ImageViewerModal from '@/components/widget/ImageViewerModal.vue';
+import { computed, ref } from 'vue';
 
 const images = ref([
   {
     id: 1,
-    image: 'https://images.unsplash.com/photo-1687275161342-8699c61e4364?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+    image: '/red-sweater.png'
   },
   {
     id: 2,
-    image: 'https://images.unsplash.com/photo-1687275160744-6cb5bb16544a?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+    image: '/white-sweater.png'
   },
   {
     id: 3,
-    image: 'https://images.unsplash.com/photo-1641399050826-9616c90427bb?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+    image: '/yellow-sweater.png'
   },
   {
     id: 4,
-    image: 'https://images.pexels.com/photos/2971061/pexels-photo-2971061.jpeg?_gl=1*xmznkl*_ga*OTAzOTgwMTguMTczNzAwNTI1OA..*_ga_8JE65Q40S6*czE3NjM4Mjc4NTUkbzMzJGcxJHQxNzYzODMxOTI1JGoxJGwwJGgw'
+    image: '/blue-sweater.png'
   },
   {
     id: 5,
-    image: 'https://images.pexels.com/photos/5490059/pexels-photo-5490059.jpeg?_gl=1*1jjqf7t*_ga*OTAzOTgwMTguMTczNzAwNTI1OA..*_ga_8JE65Q40S6*czE3NjM4Mjc4NTUkbzMzJGcxJHQxNzYzODMyMDU3JGoyMCRsMCRoMA..'
+    image: '/blue-back.png'
   },
   {
     id: 6,
@@ -29,55 +29,59 @@ const images = ref([
   },
 ])
 
-// modal logic
 const isModalOpen = ref(false)
-const selectedImage = ref(images.value[0])
+const selectedIndex = ref(0)
 
-// close modal
-const handleOpenModal = () => {
+// open modal
+const handleOpenModal = (imageIndex) => {
   isModalOpen.value = true;
+  selectedIndex.value = imageIndex;
 }
+
+// image select
+const selectedImage = computed(() => {
+  return images.value[selectedIndex.value].image
+});
+
 // close modal
 const handleCloseModal = () => {
   isModalOpen.value = false;
 }
-// handle prev image
-const handlePrevImage = () => {
-  if (selectedImage.value <= 0) {
-    return;
-  } else {
-    selectedImage.value += 1;
+
+// handle prev button
+const handlePrev = () => {
+  if (selectedIndex.value > 0) {
+    selectedIndex.value -= 1;
   }
 }
-// handle next image
-const handleNextImage = () => {
-  if (selectedImage.value >= images.value.length) {
-    selectedImage.value = 0;
-  } else {
-    selectedImage.value += 1;
+
+// handle next button
+const handleNext = () => {
+  selectedIndex.value += 1;
+  if (selectedIndex.value === images.value.length) {
+    selectedIndex.value = 0;
   }
 }
+
 
 </script>
 
 <template>
   <section id="gallery" class="gallery">
-
-    <ImageViewerModal :selectedImage="selectedImage" :handleNextImage="handleNextImage"
-      :handlePrevImage="handlePrevImage" :isModalOpen="isModalOpen" :handleCloseModal="handleCloseModal" />
+    <!-- :selectedImage="selectedImage" -->
+    <ImageViewerModal :isModalOpen="isModalOpen" :handleCloseModal="handleCloseModal" :selectedImage="selectedImage"
+      :handleNext="handleNext" :handlePrev="handlePrev" />
 
     <div class="container">
-      <BaseTitle class=" text-center mb-2">Sweater Showcase</BaseTitle>
+      <BaseTitle class="text-center mb-2">Sweater Showcase</BaseTitle>
       <div class="medium-3 gap-2">
 
-        <div v-for="(img) in images" :key="img.id" @click="handleOpenModal" class="image">
+        <div v-for="(img, i) in images" :key="img.id" @click="handleOpenModal(i)" class="image">
           <BaseImage :image="img.image" />
         </div>
       </div>
     </div>
 
-
-    <!-- :activeImage="activeImage" -->
 
   </section>
 </template>

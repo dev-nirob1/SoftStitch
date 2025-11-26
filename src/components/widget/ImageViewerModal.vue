@@ -10,12 +10,12 @@ defineProps({
     type: Function
   },
   selectedImage: {
-    type: Object
+    type: String
   },
-  handlePrevImage: {
+  handlePrev: {
     type: Function
   },
-  handleNextImage: {
+  handleNext: {
     type: Function
   },
 })
@@ -25,17 +25,17 @@ defineProps({
   <div v-if="isModalOpen" class="modal">
     <div class="modal-content flex-center">
       <!-- Navigation Buttons -->
-      <BaseButton @click="handlePrevImage" class="btn-prev">
+      <BaseButton @click="handlePrev" class="btn-prev">
         <i class="fa-solid fa-arrow-left"></i>
       </BaseButton>
-      <BaseButton @click="handleNextImage" class="btn-next">
+      <BaseButton @click="handleNext" class="btn-next">
         <i class="fa-solid fa-arrow-right"></i>
       </BaseButton>
 
       <!-- modal content -->
       <div class="modal-details">
         <div class="image">
-          <BaseImage :image="selectedImage.image" />
+          <BaseImage :image="selectedImage" />
         </div>
       </div>
 
