@@ -112,7 +112,9 @@ const handleHamburger = () => {
   font-weight: 700;
   border-radius: .5rem;
 }
-
+.nav-links a:hover{
+  color: var(--secondary-color);
+}
 .hamburger {
   height: 2rem;
   width: 2rem;

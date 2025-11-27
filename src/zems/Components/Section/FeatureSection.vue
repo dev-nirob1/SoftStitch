@@ -3,12 +3,12 @@ const features = [
   {
     title: "Super Soft Fabric",
     text: "Crafted for a gentle touch and all-day comfort.",
-    image: "https://images.pexels.com/photos/3693235/pexels-photo-3693235.jpeg?_gl=1*1qhu5vs*_ga*OTAzOTgwMTguMTczNzAwNTI1OA..*_ga_8JE65Q40S6*czE3NjM4Mjc4NTUkbzMzJGcxJHQxNzYzODI4NDE4JGoxNCRsMCRoMA.."
+    image: "https://images.unsplash.com/photo-1624362774354-62f260bafca1?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     title: "Premium Wool Blend",
     text: "High-quality wool that keeps you warm and stylish.",
-    image: "https://images.pexels.com/photos/10474351/pexels-photo-10474351.jpeg?_gl=1*1qgcgt4*_ga*OTAzOTgwMTguMTczNzAwNTI1OA..*_ga_8JE65Q40S6*czE3NjM4Mjc4NTUkbzMzJGcxJHQxNzYzODI3OTQ0JGo1OCRsMCRoMA.."
+        image: "https://images.unsplash.com/photo-1641060889144-1cc91e6871ce?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     title: "Breathable & Warm",
@@ -23,7 +23,7 @@ const features = [
   {
     title: "Multiple Colors Available",
     text: "Choose your favorite shades from our collection.",
-    image: "https://images.unsplash.com/photo-1674069688221-8f3f7ef6769f?q=80&w=386&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    image: "https://images.unsplash.com/photo-1636378191768-a553ab8d8614?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     title: "Easy Care & Machine Washable",
@@ -39,7 +39,7 @@ const features = [
       <div class="medium-3 gap-2">
         <div v-for="(item, i) in features" :key="i" class="feature-card">
           <div class="image relative">
-            <BaseImage :image="item.image" />
+            <BaseImage loading="lazy" :image="item.image" />
           </div>
           <div class="p-1">
             <SubTitle>{{ item.title }}</SubTitle>

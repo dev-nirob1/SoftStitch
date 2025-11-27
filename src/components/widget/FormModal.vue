@@ -19,6 +19,7 @@ const handleSubmit = () => {
       <BaseButton @click="handleCloseFormModal" class="video-close"><i class="fa-solid fa-x"></i></BaseButton>
 
       <form @submit.prevent="handleSubmit">
+        <SubTitle class="mb-2 text-center">Information</SubTitle>
         <div class="medium-2 align-center gap-1">
           <label>
             <InputField type="text" placeholder="Enter Your Name" required />
@@ -51,7 +52,7 @@ const handleSubmit = () => {
         <div>
           <BaseTextArea placeholder="Special Instruction" />
         </div>
-        <BaseButton class="bg-secondary mb-2">Order Now</BaseButton>
+        <BaseButton class="bg-primary mb-2">Order Now</BaseButton>
       </form>
 
     </div>
@@ -82,7 +83,7 @@ const handleSubmit = () => {
   box-shadow: var(--box-shadow);
   z-index: 1;
   background: var(--white-color);
-  padding: 2rem 0;
+  padding: 1rem 0 2rem 0;
 }
 
 .modal-content::-webkit-scrollbar {

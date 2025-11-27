@@ -28,9 +28,7 @@
             <i class="fa-solid fa-envelope"></i> support@softStitch.com
           </ListItem>
         </ul>
-
       </div>
-
 
       <!-- Newsletter section -->
       <div class="social">
@@ -53,7 +51,7 @@
     <!-- Footer bottom copyright -->
     <div class="footer-bottom">
       <BaseParagraph> &copy; {{ new Date().getFullYear() }} SoftStitch. Designed and developed by
-        <a href="webpoka.com">Webpoka</a>
+        <a target="_blank" href="https://webpoka.com/">Webpoka</a>
       </BaseParagraph>
     </div>
   </footer>
@@ -106,7 +104,7 @@
   font-size: 14px;
 }
 
-.footer-bottom a:hover {
-  color: var(--primary-color);
+.footer-bottom a {
+  color: var(--secondary-color);
 }
 </style>

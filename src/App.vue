@@ -3,7 +3,6 @@ import { ref } from 'vue';
 import FooterSection from './components/section/FooterSection.vue';
 import NavbarSection from './components/section/NavbarSection.vue';
 import CtaSection from './zems/Components/Section/CtaSection.vue';
-// import FaqSection from './zems/Components/Section/FaqSection.vue';
 import FeatureSection from './zems/Components/Section/FeatureSection.vue';
 import GallerySection from './zems/Components/Section/GallerySection.vue';
 import HeroSection from './zems/Components/Section/HeroSection.vue';
@@ -30,7 +29,6 @@ const handleCloseFormModal = () => {
   <GallerySection />
   <CtaSection :handleOpenFormModal="handleOpenFormModal" />
   <TestimonialSection />
-  <!-- <FaqSection/> -->
   <FooterSection />
 
   <FormModal :isFormModalOpen="isFormModalOpen" :handleCloseFormModal="handleCloseFormModal"/>

@@ -4,19 +4,19 @@ import { ref } from 'vue';
 const images = [
   {
     id: 1,
+    image: "https://images.unsplash.com/photo-1542595607-63507592a7d8?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    color: { name: "White", hex: "#fff" }
+  },
+  {
+    id: 2,
     image: "/red.jpg",
     color: { name: "Red", hex: "#D86A6A" }
   },
   {
-    id: 2,
+    id: 3,
     image: "https://images.unsplash.com/photo-1616646068304-53bcead13c58?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     color: { name: "Yellow", hex: "#F6D26C" }
-  },
-  {
-    id: 3,
-    image: "https://images.unsplash.com/photo-1542595607-63507592a7d8?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    color: { name: "White", hex: "#fff" }
-  },
+  }
 ];
 
 const selectedImage = ref(images[0])
