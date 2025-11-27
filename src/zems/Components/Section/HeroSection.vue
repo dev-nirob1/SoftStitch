@@ -1,3 +1,11 @@
+<script setup>
+defineProps({
+  handleOpenFormModal: {
+    type: Function
+  }
+})
+</script>
+
 <template>
   <section class="hero text-white relative">
     <div class="container">
@@ -7,7 +15,7 @@
           <BaseParagraph>Stay warm in premium-crafted sweaters designed for everyday comfort.
           </BaseParagraph>
           <div class="flex gap-1">
-            <BaseButton class="bg-primary">Buy Now</BaseButton>
+            <BaseButton @click="handleOpenFormModal" class="bg-primary">Buy Now</BaseButton>
             <a class="btn outline-btn" href="#feature">Explore Feature</a>
           </div>
         </div>
@@ -29,6 +37,13 @@
   bottom: 0;
   height: 450px;
   width: 450px;
+}
+.outline-btn {
+  border-color: var(--white-color);
+  color: var(--white-color);
+}
+.outline-btn:hover{
+  border-color: var(--primary-color);
 }
 </style>
 

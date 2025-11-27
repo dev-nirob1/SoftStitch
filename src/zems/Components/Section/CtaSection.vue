@@ -1,3 +1,11 @@
+<script setup>
+defineProps({
+  handleOpenFormModal: {
+    type: Function
+  }
+})
+</script>
+
 <template>
   <section class="cta-section relative mt-5">
     <div class="container large-2 gap-2">
@@ -10,7 +18,7 @@
           <h4>৳1490</h4>
           <span class="text-secondary">20% OFF</span>
         </div>
-        <BaseButton class="outline-btn">
+        <BaseButton @click="handleOpenFormModal" class="outline-btn">
           Shop Now
         </BaseButton>
       </div>

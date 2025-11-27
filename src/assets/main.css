@@ -192,9 +192,10 @@ ul {
   transition: all 0.3s ease-in-out;
   line-height: 1;
 }
-.btn.bg-secondary:hover {
-  background: var(--dark-color);
+.btn.bg-primary:hover{
+  background: var(--secondary-color);
 }
+
 .outline-btn {
   border: 1px solid var(--primary-color);
   color: var(--primary-color);

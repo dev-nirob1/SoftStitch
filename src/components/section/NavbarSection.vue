@@ -109,6 +109,8 @@ const handleHamburger = () => {
 .nav-links a {
   display: inline-block;
   padding: .5rem 1rem;
+  font-weight: 700;
+  border-radius: .5rem;
 }
 
 .hamburger {

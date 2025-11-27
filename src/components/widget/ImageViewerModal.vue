@@ -65,7 +65,7 @@ defineProps({
 
 .modal .btn {
   position: fixed;
-  background: rgba(0, 0, 0, 0.5);
+  background: var(--secondary-color);
   color: var(--white-color);
   border-radius: .25rem;
   border: none;
