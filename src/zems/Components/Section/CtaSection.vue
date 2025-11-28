@@ -58,12 +58,12 @@ defineProps({
     position: absolute;
     right: 0;
     height: 560px;
-    bottom: -.6rem;
+    bottom: 0;
     max-width: 50%;
   }
 
   img {
-    object-fit: contain;
+    object-fit: cover;
   }
 }
 </style>

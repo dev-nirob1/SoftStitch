@@ -1,6 +1,18 @@
 <script setup>
+import { ref } from 'vue';
 import ProductGallery from '../Widget/ProductGallery.vue';
+import MeasurementModal from '@/components/widget/MeasurementModal.vue';
 
+const isModalOpen = ref(false)
+
+// openModal
+const handleModalOpen = () => {
+  isModalOpen.value = true
+}
+// closeModal
+const handleCloseModal = () => {
+  isModalOpen.value = false
+}
 </script>
 
 <template>
@@ -8,12 +20,12 @@ import ProductGallery from '../Widget/ProductGallery.vue';
     <div class="container">
       <div class="medium-2 gap-2">
         <!-- images based on color changed -->
-        <ProductGallery/>
-        
-          <!-- details  -->
+        <ProductGallery />
+
+        <!-- details  -->
         <div class="project-details">
           <BaseTitle class="mb-1">Wrap Yourself in Comfort</BaseTitle>
-             <BaseParagraph>
+          <BaseParagraph>
             Experience unbeatable softness with our premium winter sweater — designed for warmth, comfort, and style.
           </BaseParagraph>
 
@@ -27,15 +39,25 @@ import ProductGallery from '../Widget/ProductGallery.vue';
             <ListItem><i class="fas fa-tint"></i> Machine Washable</ListItem>
             <ListItem><i class="fas fa-layer-group"></i> Premium Wool Blend</ListItem>
           </ul>
-          <BaseButton class="bg-primary mt-2">Measurement</BaseButton>
+          <BaseButton @click="handleModalOpen" class="bg-primary mt-2">Measurement</BaseButton>
         </div>
       </div>
     </div>
+
+    <MeasurementModal :isModalOpen="isModalOpen" :handleCloseModal="handleCloseModal"/>
   </section>
 </template>
 <style scoped>
 .product-details {
   padding: 3.75rem 0;
   font-size: 1.05rem;
+}
+.product-details li {
+  background: var(--white-color);
+  padding: .5rem;
+  border-radius: .5rem;
+}
+.product-details li i {
+  color: var(--secondary-color);
 }
 </style>

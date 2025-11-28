@@ -76,8 +76,8 @@
 
 .footer .social-links a {
   border-radius: .25rem;
-  background: var(--white-color);
-  color: var(--primary-color);
+  background: var(--secondary-color);
+  color: var(--white-color);
   padding: 0 .75rem;
 }
 
